@@ -49,13 +49,13 @@ public class GetAuthor {
 	public Response getAuthor(@Parameter(
             description = "The unique name of the author",
             required = true,
-            example = "Oliver Rodriguez",
+            example = "Peter Yang",
             schema = @Schema(type = SchemaType.STRING))
 			@QueryParam("name") String name) {
 		
 			Author author = new Author();
-			author.name = "Oliver Rodriguez";
-			author.twitter = "https://twitter.com/heres__ollie";
+			author.name = "Peter Yang";
+			author.twitter = "https://twitter.com/whuyp";
 			author.blog = "https://developer.ibm.com";
 
 			return Response.ok(this.createJson(author)).build();
